@@ -1253,6 +1253,7 @@ def db_restore(
     # Check backup storage redundancy configurations
     location = _get_server_location(cmd.cli_ctx, server_name=server_name, resource_group_name=resource_group_name)
     print(location)
+    return 
     if _should_show_backup_storage_redundancy_warnings(location):
         if not kwargs['requested_backup_storage_redundancy']:
             _backup_storage_redundancy_take_source_warning()
